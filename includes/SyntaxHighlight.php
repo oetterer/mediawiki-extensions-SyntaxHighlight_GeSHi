@@ -295,7 +295,7 @@ class SyntaxHighlight {
 		];
 
 		// Line numbers
-		if ( isset( $args['line'] ) ) {
+		if ( isset( $args['line'] ) && ( $args['line'] != "off" ) ) {
 			$options['linenos'] = 'inline';
 		}
 
