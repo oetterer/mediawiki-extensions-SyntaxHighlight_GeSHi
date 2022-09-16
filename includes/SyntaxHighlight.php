@@ -152,7 +152,7 @@ class SyntaxHighlight {
 		}
 		'@phan-var array{class:string,dir:string} $htmlAttribs';
 
-		if ( isset( $args['inline'] ) ) {
+		if ( isset( $args['inline'] ) && ( $args['inline'] != 'off' ) ) {
 			// Enforce inlineness. Stray newlines may result in unexpected list and paragraph processing
 			// (also known as doBlockLevels()).
 			$out = str_replace( "\n", ' ', $out );
